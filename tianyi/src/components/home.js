@@ -4,17 +4,6 @@ import longing from './images/longing.jpg';
 import umbrella from './images/umbrella.jpg';
 import './home.css';
 
-var slides = document.querySelectorAll('.slide'); 
-var currentSlide = 0; 
-var slideInterval = setInterval(nextSlide, 5000); 
- 
-function nextSlide() { 
-  slides[currentSlide].className = 'slide'; 
-  currentSlide = (currentSlide + 1) % slides.length; 
-  slides[currentSlide].className = 'slide active'; 
-} 
-
-
 function Home() {
     return (
         <div>
@@ -33,6 +22,18 @@ function Home() {
             
         </div>
     );
+
+    
 }
+
+var slides = document.querySelectorAll('.slide'); 
+var currentSlide = 0; 
+// var slideInterval = setInterval(nextSlide, 5000); 
+
+function nextSlide() { 
+    slides[currentSlide].className = 'slide'; 
+    currentSlide = (currentSlide + 1) % slides.length; 
+    slides[currentSlide].className = 'slide active'; 
+} 
 
 export default Home;
