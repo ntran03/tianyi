@@ -9,11 +9,11 @@ export default function Footer() {
     return (
       <Box
         sx={{
-          backgroundColor: (theme) =>
-            theme.palette.mode === "light"
-              ? theme.palette.grey[200]
-              : theme.palette.grey[800],
-          p: 6,
+          p: 1,
+          position: "fixed",
+          bottom: 0,
+          left: 0,
+          width: "100%"
         }}
         component="footer"
       >

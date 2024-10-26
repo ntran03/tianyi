@@ -28,7 +28,13 @@ function Header() {
     };
 
     return (
-        <AppBar position="static" sx={{ backgroundColor: "#6760E6" }}>
+        <AppBar 
+            position="fixed"
+            sx={{ 
+                backgroundColor: "rgba(136, 183, 235, 0.5)",
+                backdropFilter: "blur(5px)",
+                boxShadow: "none"
+            }}>
             <Toolbar>
                 {/* Logo */}
                 <img
