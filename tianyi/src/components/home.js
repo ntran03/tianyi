@@ -1,10 +1,23 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import hantang from './images/hantang.jpg';
 import longing from './images/longing.jpg';
 import umbrella from './images/umbrella.jpg';
 import './home.css';
 
 function Home() {
+    useEffect(() => {
+        var slides = document.querySelectorAll('.slide'); 
+        var currentSlide = 0; 
+        
+
+        function nextSlide() { 
+            slides[currentSlide].className = 'slide'; 
+            currentSlide = (currentSlide + 1) % slides.length; 
+            slides[currentSlide].className = 'slide active'; 
+        } 
+        var slideInterval = setInterval(nextSlide, 2000); 
+        return () => clearInterval(slideInterval);
+    }, []);
     return (
         <div>
         
@@ -25,15 +38,5 @@ function Home() {
 
     
 }
-
-var slides = document.querySelectorAll('.slide'); 
-var currentSlide = 0; 
-// var slideInterval = setInterval(nextSlide, 5000); 
-
-function nextSlide() { 
-    slides[currentSlide].className = 'slide'; 
-    currentSlide = (currentSlide + 1) % slides.length; 
-    slides[currentSlide].className = 'slide active'; 
-} 
 
 export default Home;

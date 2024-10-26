@@ -61,7 +61,7 @@ const images = importAll(require.context('./dancer_images', false, /\.jpg$/));
 
 function Dancers() {
     return (
-        <Box sx={{ minWidth: 275, padding: 2, position: 'relative', overflow: 'hidden' }}>
+        <Box sx={{ minWidth: 275, padding: 2, position: 'relative', overflow: 'hidden', pt: 10}}>
             <Box
                 sx={{
                     display: 'flex',
