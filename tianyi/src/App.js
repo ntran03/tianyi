@@ -11,15 +11,16 @@ function App() {
   return (
     <Router>
       <Header />
-      {/*
+
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/events" element={<Dancers />} />
         <Route path="/costume_sale" element={<Costumes />} />
         <Route path="/contact" element={<Contact />} />
       </Routes>
+
       <Footer />
-      */}
+      
     </Router>
   );
 }

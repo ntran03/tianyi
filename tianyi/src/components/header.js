@@ -9,6 +9,8 @@ import Typography from "@mui/material/Typography";
 import Button from "@mui/material/Button";
 import IconButton from "@mui/material/IconButton";
 import MenuIcon from "@mui/icons-material/Menu";
+import { Link } from "react-router-dom";  // Import Link for routing
+
 
 import logo from '../logo.png';
 
@@ -17,10 +19,10 @@ function Header() {
     const getMenuButtons = () => {
         return (
             <>
-                <Button color="inherit">Home</Button>
-                <Button color="inherit">Dancers</Button>
-                <Button color="inherit">Costume Sale</Button>
-                <Button color="inherit">Contact</Button>
+                <Button color="inherit" component={Link} to="/">Home</Button>
+                <Button color="inherit" component={Link} to="/events">Dancers</Button>
+                <Button color="inherit" component={Link} to="/costume_sale">Costume Sale</Button>
+                <Button color="inherit" component={Link} to="/contact">Contact</Button>
             </>
         );
     };
