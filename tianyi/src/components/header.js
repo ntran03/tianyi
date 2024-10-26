@@ -42,7 +42,7 @@ function Header() {
                     component="div"
                     sx={{ flexGrow: 1, fontFamily: "Work Sans, sans-serif", fontWeight: 600, color: "#FFFEFE", textAlign: "middle" }}
                 >
-                    Tianyi Dance Team
+                    天艺 Tianyi Dance Team
                 </Typography>
                 {/* Menu Buttons */}
                 {getMenuButtons()}
