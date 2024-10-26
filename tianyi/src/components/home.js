@@ -14,6 +14,7 @@ function nextSlide() {
   slides[currentSlide].className = 'slide active'; 
 } 
 
+
 function Home() {
     return (
         <div>
