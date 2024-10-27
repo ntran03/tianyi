@@ -20,6 +20,18 @@ function Home() {
         return () => clearInterval(slideInterval);
     }, []);
 
+    const upcoming_events = [
+        { title: "TASA Night Market: 11/15, 7:00 pm", description: "Description for Event 1."},
+        { title: "Forward Motion Showcase, 11/24, 5:30 pm", description: "Description for Event 2."},
+        { title: "Unbound Fall Showcase: 12/8, 3:00 pm", description: "Description for Event 3."}
+    ];
+
+    const prev_events = [
+        { title: "aKDPhi Pink Pageant: 10/19, 7:00 pm", description: "Anna performed 醉清波.", link: "https://youtu.be/4eZWykg_WOc" },
+        { title: "Event 2", description: "Description for Event 2." },
+        { title: "Event 3", description: "Description for Event 3." }
+    ];
+
     return (
         <Box sx={{ padding: 0 }}>
             {/* Slideshow */}
@@ -35,34 +47,57 @@ function Home() {
                 </div>
             </Box>
             {/* Grid for two cards */}
-            <Grid container spacing={4} sx={{ mb: 2, px: 2 }}>
+            <Grid container spacing={4} sx={{ mb: 2, px: 2}}>
                 <Grid item xs={12} sm={6}>
                     <Card 
                         variant="outlined" 
-                        sx={{ padding: 3, textAlign: 'center' }}
+                        sx={{ padding: 3, textAlign: 'center', bgcolor: "#ebe9e4", opacity: 0.6}}
                     >
-                        <CardContent>
+                        <CardContent sx={{opacity: 1}}>
                             <Typography variant="h6">
                                 Upcoming Events
                             </Typography>
-                            <Typography variant="body2">
-                                This is the content of Card 1.
-                            </Typography>
+                            <div className="timeline">
+                                <div className="outer">
+                                    {upcoming_events.map((event, index) => (
+                                        <div className="card" key={index}>
+                                            <div className="info">
+                                                <div className="title">{event.title}</div>
+                                                <div>{event.description}</div>
+                                            </div>
+                                        </div>
+                                    ))}
+                                </div>
+                            </div>
                         </CardContent>
                     </Card>
                 </Grid>
                 <Grid item xs={12} sm={6}>
                     <Card 
                         variant="outlined" 
-                        sx={{ padding: 3, textAlign: 'center'}} // Increased padding
+                        sx={{ padding: 3, textAlign: 'center', bgcolor: "#ebe9e4", opacity: 0.6}} // Increased padding
                     >
                         <CardContent>
                             <Typography variant="h6">
-                                Card 2
+                                Previous Performances
                             </Typography>
-                            <Typography variant="body2">
-                                This is the content of Card 2.
-                            </Typography>
+                            <div className="timeline">
+                                <div className="outer">
+                                    {prev_events.map((event, index) => (
+                                        <div className="card" key={index}>
+                                            <div className="info">
+                                                <div className="title">{event.title}</div>
+                                                <div>{event.description}</div>
+                                                {index === 0 && (
+                                                    <Typography variant="body2">
+                                                        Watch the performance <a href={event.link}>here</a>!
+                                                    </Typography>
+                                                )}
+                                            </div>
+                                        </div>
+                                    ))}
+                                </div>
+                            </div>
                         </CardContent>
                     </Card>
                 </Grid>
