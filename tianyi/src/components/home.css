@@ -1,24 +1,33 @@
 #slideshow { 
-  position: relative; 
-  height: 400px; 
-  width: 100%;
-} 
- 
-.slide { 
-    position: absolute;
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
-    opacity: 0; 
-    transition: opacity 1s ease-in-out; 
-} 
-
-.slide img {
-    width: 100%;
-    height: 100%;
-    object-fit: contain;
-}
-
-.slide.active { 
-    opacity: 1; 
-} 
+    position: relative; 
+    height: 100vh; /* Full height of the viewport */
+    width: 100%; /* Full width of the viewport */
+    overflow: hidden; /* Prevent overflow */
+  } 
+  
+  .slide { 
+      position: absolute;
+      background-size: cover; /* Ensure images cover the entire area */
+      background-position: center;
+      background-repeat: no-repeat;
+      opacity: 0; 
+      transition: opacity 1s ease-in-out; 
+      width: 100%; 
+      height: 100%; /* Full height of the parent */
+  } 
+  
+  .slide img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover; /* Fill and crop the image to cover the box */
+  }
+  
+  .slide.active { 
+      opacity: 1; 
+  }
+  
+  /* New class for consistent spacing */
+  .card-spacing {
+      margin-top: 5vh; /* Space between slideshow and card, adjust as needed */
+  }
+  
