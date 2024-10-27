@@ -10,15 +10,8 @@ import emailjs from 'emailjs-com';
 import han from './images/han.jpg';
 import './contact.css'
 import './fonts.css'
-import { ThemeProvider, createTheme } from '@mui/material/styles';
 
 
-const theme = createTheme({
-    typography: {
-        
-        fontFamily: 'Cormorant, serif'
-    }
-});
 
 function ContactUs() {
     const [formData, setFormData] = useState({
@@ -57,9 +50,8 @@ function ContactUs() {
     };
 
     return (
-        <ThemeProvider theme={theme}>
             <Box sx={{ padding: 0 }}>
-                <Box id="slideshow" sx={{ position: 'relative', height: '400px', width: '100%', mb: 4 }}> {/* Increased mb */}
+                <Box id="slideshow" sx={{ position: 'relative', height: '400px', width: '100%', mb: 4, padding: 0 }}> {/* Increased mb */}
                     <div className="slide active">
                         <img src={han} alt="Han 2023"/>
                     </div>
@@ -71,16 +63,20 @@ function ContactUs() {
                     <Grid item xs={12} md={6}>
                         <Card sx={{ minWidth: 275 }}>
                             <CardContent>
-                                <Typography variant="h5" gutterBottom>
+                                <Typography variant="h5" sx={{ fontFamily: "Cormorant"}} gutterBottom>
                                     Contact Us
                                 </Typography>
-                                <form onSubmit={handleSubmit} style={{ display: 'flex', flexDirection: 'column', gap: '1rem' }}>
+                                <form onSubmit={handleSubmit} style={{ display: 'flex', flexDirection: 'column', gap: '1rem'}}>
                                     <TextField
                                         label="First Name"
                                         name="firstName"
                                         required
                                         value={formData.firstName}
                                         onChange={handleChange}
+                                        inputProps={{
+                                            style: { fontFamily: 'Cormorant, serif' },
+                                        }}
+                                        
                                     />
                                     <TextField
                                         label="Last Name"
@@ -88,6 +84,9 @@ function ContactUs() {
                                         required
                                         value={formData.lastName}
                                         onChange={handleChange}
+                                        inputProps={{
+                                            style: { fontFamily: 'Cormorant, serif' },
+                                        }}
                                     />
                                     <TextField
                                         label="Email"
@@ -96,6 +95,9 @@ function ContactUs() {
                                         required
                                         value={formData.email}
                                         onChange={handleChange}
+                                        inputProps={{
+                                            style: { fontFamily: 'Cormorant, serif' },
+                                        }}
                                     />
                                     <TextField
                                         label="Subject"
@@ -103,6 +105,9 @@ function ContactUs() {
                                         required
                                         value={formData.subject}
                                         onChange={handleChange}
+                                        inputProps={{
+                                            style: { fontFamily: 'Cormorant, serif' },
+                                        }}
                                     />
                                     <TextField
                                         label="Message"
@@ -112,8 +117,11 @@ function ContactUs() {
                                         rows={4}
                                         value={formData.message}
                                         onChange={handleChange}
+                                        inputProps={{
+                                            style: { fontFamily: 'Cormorant, serif' },
+                                        }}
                                     />
-                                    <Button variant="contained" type="submit">
+                                    <Button variant="contained" type="submit" sx={{ fontFamily: "Cormorant"}}>
                                         Send Message
                                     </Button>
                                 </form>
@@ -125,10 +133,10 @@ function ContactUs() {
                     <Grid item xs={12} md={6}>
                         <Card sx={{ minWidth: 275 }}>
                             <CardContent>
-                                <Typography variant="h5" gutterBottom>
+                                <Typography variant="h5" sx={{ fontFamily: "Cormorant"}} gutterBottom>
                                     Additional Information
                                 </Typography>
-                                <Typography variant="body1">
+                                <Typography variant="body1" sx={{ fontFamily: "Cormorant"}}>
                                     Feel free to contact us for any inquiries or performance opportunities. We aim to respond to all messages
                                     within 48 hours. You can also reach us at tianyidance@gmail.com.
                                 </Typography>
@@ -137,7 +145,6 @@ function ContactUs() {
                     </Grid>
                 </Grid>
             </Box>
-        </ThemeProvider>
     );
 }
 
