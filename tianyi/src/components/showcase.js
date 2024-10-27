@@ -117,6 +117,12 @@ function Showcase() {
                 </Box>
                 <Box>
                     <div className="past">
+                        <h1>2024-2025</h1>
+                        <p>Our showcase this year will be on <span class="date"><strong>April 12th, 2025</strong></span>. Mark your calendars!</p>
+                    </div>
+                </Box>
+                <Box>
+                    <div className="past">
                         <h1>Past Showcases</h1>
                         <p>Hover over each showcase flyer to learn more! Click the flyers for the full Youtube videos.</p>
                     </div>
