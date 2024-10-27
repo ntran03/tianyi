@@ -1,20 +1,28 @@
 import React, { useState } from 'react';
 import Box from '@mui/material/Box';
 import Button from '@mui/material/Button';
-import lotus from './images/lotus.jpg'
+import lotus from './images/lotus.jpg';
+import './showcase.css'
 
 function Showcase() {
     return (
-        <Box sx={{ padding: 0, pt: 10 }}>
+        <Box sx={{ padding:0 }}>
             <Box>
-                <div>
-                    <img src={lotus} alt="Lotus"/>
+                <div className="lotus">
+                    <img src={lotus} alt="Lotus" className="lotus-image"/>
                 </div>
             </Box> 
             <Box>
-            <div>
-                <h1>Past Showcases</h1>
-            </div>
+                <div className="past">
+                    <h1>Past Showcases</h1>
+                    <p>Hover over each showcase flyer to learn more! Click the flyers for the full Youtube videos.</p>
+                    
+                </div>
+            </Box>
+            <Box>
+                <div className="past">
+                    <h1>Other Performances</h1>
+                </div>
             </Box>
         </Box>
     )

@@ -20,9 +20,10 @@ function Header() {
         return (
             <>
                 <Button color="inherit" component={Link} to="/">Home</Button>
-                <Button color="inherit" component={Link} to="/events">Dancers</Button>
+                <Button color="inherit" component={Link} to="/dancers">Dancers</Button>
+                <Button color="inherit" component={Link} to="/showcase">Showcase</Button>
                 <Button color="inherit" component={Link} to="/costume_sale">Costume Sale</Button>
-                <Button color="inherit" component={Link} to="/contact">Contact</Button>
+                <Button color="inherit" component={Link} to="/contact">Contact Us</Button>
             </>
         );
     };
