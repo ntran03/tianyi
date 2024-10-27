@@ -8,6 +8,7 @@
 .past {
     text-align: center;
     padding: 2em;
+    padding-bottom: 0;
 }
 .past > p {
     padding: 2em;
@@ -15,4 +16,11 @@
 }
 .flyers {
     padding: 2em;
+}
+.date {
+    color: rgb(73, 143, 223);
+    font-size: 1.5rem;
+}
+.date:hover {
+    color: rgb(136, 183, 235);
 }
