@@ -44,6 +44,30 @@ const dancersData = [
         name: "Riva",
         description: "Public Relations",
         additionalDetails: "Member since: Fall 2022\nMajor: Computer Science '26",
+    },
+    {
+        id: 7,
+        name: "Linna",
+        description: "Internal Relations",
+        additionalDetails: "Member since: Fall 2023\nMajor: Philosophy, Politics, and Economics '26",
+    },
+    {
+        id: 8,
+        name: "Abigail",
+        description: "Artistic Board",
+        additionalDetails: "Member since: Fall 2021\nMajor: Biology '25",
+    },
+    {
+        id: 9,
+        name: "Nicole T",
+        description: "Artistic Board",
+        additionalDetails: "Member since: Fall 2022\nMajor: Information Science '25",
+    },
+    {
+        id: 10,
+        name: "Claire C",
+        description: "Artistic Board",
+        additionalDetails: "Member since: Fall 2023\nMajor: Computer Science '27",
     }
 ];
 
