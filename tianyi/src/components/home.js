@@ -21,15 +21,15 @@ function Home() {
     }, []);
 
     const upcoming_events = [
-        { title: "TASA Night Market: 11/15, 7:00 pm", description: "Description for Event 1."},
-        { title: "Forward Motion Showcase, 11/24, 5:30 pm", description: "Description for Event 2."},
-        { title: "Unbound Fall Showcase: 12/8, 3:00 pm", description: "Description for Event 3."}
+        { title: "TASA Night Market: 11/15, 7:00 pm", description: "Dai is performing at TASA Night Market!"},
+        { title: "Forward Motion Showcase, 11/24, 5:30 pm", description: "Nicole and Huanying are performing at Forward Motion's showcase!"},
+        { title: "Unbound Fall Showcase: 12/8, 3:00 pm", description: ""}
     ];
 
     const prev_events = [
         { title: "aKDPhi Pink Pageant: 10/19, 7:00 pm", description: "Anna performed 醉清波.", link: "https://youtu.be/4eZWykg_WOc" },
-        { title: "Event 2", description: "Description for Event 2." },
-        { title: "Event 3", description: "Description for Event 3." }
+        { title: "Tianyi 2024 Showcase, 4/13, 7:00 pm", description: "", link: "https://www.youtube.com/playlist?list=PL0px6vhlAgF4YTdttUuTvxhxfN49oHjfB" },
+        { title: "n/a", description: "", link: "" }
     ];
 
     return (
@@ -48,7 +48,7 @@ function Home() {
             </Box>
             {/* Grid for two cards */}
             <Grid container spacing={4} sx={{ mb: 2, px: 2}}>
-                <Grid item xs={12} sm={6}>
+                <Grid item xs={12} sm={6} sx={{ display: 'flex' }}>
                     <Card 
                         variant="outlined" 
                         sx={{ padding: 3, textAlign: 'center', bgcolor: "#ebe9e4", opacity: 0.6}}
@@ -87,12 +87,8 @@ function Home() {
                                         <div className="card" key={index}>
                                             <div className="info">
                                                 <div className="title">{event.title}</div>
-                                                <div>{event.description}</div>
-                                                {index === 0 && (
-                                                    <Typography variant="body2">
-                                                        Watch the performance <a href={event.link}>here</a>!
-                                                    </Typography>
-                                                )}
+                                                <div>{event.description} Watch the performance <a href={event.link} target='_blank'>here</a>!</div>
+    
                                             </div>
                                         </div>
                                     ))}
