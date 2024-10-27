@@ -1,0 +1,66 @@
+.container1 {
+    position: relative;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.container1 img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}
+
+.container2 {
+    position: relative;
+    text-align: center;
+    margin: 20px auto;
+    width: 100%;
+    max-width: 1275px;
+    padding-bottom: 50px;
+}
+
+.slider-item {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0 5px;
+    box-sizing: border-box;
+    outline: none;
+    position: relative;
+}
+
+.slider-item img {
+    width: 100%;
+    height: auto;
+    max-height: 300px;
+    object-fit: cover;
+}
+
+.costume-description {
+    margin-top: 10px;
+    margin-bottom: 5px;
+    text-align: center;
+    font-size: 14px;
+    color: black;
+    
+}
+
+.container3 {
+    position: absolute;
+    top: 100px;
+    left: 50px;
+    font-size: 50px;
+    color: white; 
+}
+
+.floating-textbox {
+    margin-top: 10px;
+    color: white;
+    display: inline-block;
+    max-width: 450px;
+    position: relative;
+    z-index: 1;
+    font-size: 25px;
+}
+
