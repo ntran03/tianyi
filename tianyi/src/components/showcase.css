@@ -7,4 +7,11 @@
 }
 .past {
     text-align: center;
+    padding: 2em;
+}
+.past > p {
+    padding: 2em;
+}
+.flyers {
+    padding: 2em;
 }
