@@ -2,6 +2,7 @@ import * as React from "react";
 import Container from "@mui/material/Container";
 import Typography from "@mui/material/Typography";
 import { Box } from "@mui/material";
+import './fonts.css'
 
 export default function Footer() {
     return (
@@ -14,7 +15,7 @@ export default function Footer() {
             component="footer"
         >
             <Container maxWidth="sm">
-                <Typography variant="body2" color="text.secondary" align="center">
+                <Typography variant="body2" color="text.secondary" align="center" sx={{ fontFamily: "Cormorant"}}>
                     {"© "}
                     {new Date().getFullYear()}
                     {" Tianyi."}
