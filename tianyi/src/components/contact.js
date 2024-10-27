@@ -121,7 +121,7 @@ function ContactUs() {
                                             style: { fontFamily: 'Cormorant, serif' },
                                         }}
                                     />
-                                    <Button variant="contained" type="submit" sx={{ fontFamily: "Cormorant"}}>
+                                    <Button variant="contained" type="submit" sx={{ fontFamily: "Cormorant", bgcolor: "rgb(136, 183, 235)", opacity: 0.6 }}>
                                         Send Message
                                     </Button>
                                 </form>
