@@ -6,6 +6,17 @@ import Grid from '@mui/material/Grid';
 import Card from '@mui/material/Card';
 import CardContent from '@mui/material/CardContent';
 import Typography from '@mui/material/Typography';
+import './fonts.css'
+import { ThemeProvider, createTheme } from '@mui/material/styles';
+
+
+const theme = createTheme({
+    typography: {
+        
+        fontFamily: 'Cormorant, serif'
+    }
+});
+
 
 function Showcase() {
     const years = Array.from({ length: 11 }, (_, index) => 2024 - index);
@@ -27,97 +38,100 @@ function Showcase() {
     };
 
     return (
-        <Box sx={{ padding: 0 }}>
-            <Box>
-                <div className="lotus">
-                    <img src={lotus} alt="Lotus" className="lotus-image" />
-                </div>
-            </Box>
-            <Box>
-                <div className="past">
-                    <h1>Past Showcases</h1>
-                    <p>Hover over each showcase flyer to learn more! Click the flyers for the full Youtube videos.</p>
-                </div>
-            </Box>
-            <Grid container spacing={2} sx={{ margin: '20px', justifyContent: 'center'}}>
-            {years.map(year => (
-                    <Grid item xs={12} sm={6} md={3} key={year} sx={{ margin: '5px'}}>
-                        <Card 
-                            variant="outlined" 
-                            sx={{ 
-                                position: 'relative', 
-                                height: '500px', 
-                                overflow: 'hidden',
-                                '&:hover .overlay': {
-                                    opacity: 1, 
-                                }
-                            }}
-            
-                        >
-                            <img
-                                src={images[year]} 
-                                alt={year}
-                                style={{ 
-                                    width: '100%', 
-                                    height: '100%', 
-                                    objectFit: 'cover', 
-                                    position: 'absolute', 
-                                    top: 0,
-                                    left: 0,
-                                    zIndex: 0 
-                                }}
-                            />
-                            <CardContent 
+        <ThemeProvider theme={theme}>
+            <Box sx={{ padding: 0 }}>
+                <Box>
+                    <div className="lotus">
+                        <img src={lotus} alt="Lotus" className="lotus-image" />
+                    </div>
+                </Box>
+                <Box>
+                    <div className="past">
+                        <h1>Past Showcases</h1>
+                        <p>Hover over each showcase flyer to learn more! Click the flyers for the full Youtube videos.</p>
+                    </div>
+                </Box>
+                <Grid container spacing={2} sx={{ margin: '20px', justifyContent: 'center'}}>
+                {years.map(year => (
+                        <Grid item xs={12} sm={6} md={3} key={year} sx={{ margin: '5px'}}>
+                            <Card 
+                                variant="outlined" 
                                 sx={{ 
-                                    position: 'absolute', 
-                                    bottom: 0, 
-                                    left: 0, 
-                                    right: 0, 
-                                    zIndex: 1,
-                                    color: '#00000', 
-                                    backgroundColor: 'rgba(256, 256, 256, 0.6)', 
-                                    padding: '16px',
-                                    margin: '8px',
-                                    opacity: 0, 
-                                    transition: 'opacity 0.3s ease', 
-                                    '&.overlay': { 
-                                        position: 'absolute',
-                                        top: 0,
-                                        left: 0,
-                                        right: 0,
-                                        bottom: 0,
-                                        display: 'flex',
-                                        flexDirection: 'column',
-                                        justifyContent: 'center',
-                                        alignItems: 'center',
-                                        padding: '8px',
+                                    position: 'relative', 
+                                    height: '500px', 
+                                    overflow: 'hidden',
+                                    '&:hover .overlay': {
+                                        opacity: 1, 
                                     }
                                 }}
-                                className="overlay"
+                
                             >
-                                {/* <Typography variant="h6" component="div">
-                                    {dancer.name}
-                                </Typography>
-                                <Typography sx={{ mb: 1.5 }}>
-                                    {dancer.description}
-                                </Typography>
-                                <Typography 
-                                    variant="body2" 
-                                    sx={{ whiteSpace: 'pre-line', textAlign: 'center' }}
+                                <img
+                                    src={images[year]} 
+                                    alt={year}
+                                    style={{ 
+                                        width: '100%', 
+                                        height: '100%', 
+                                        objectFit: 'cover', 
+                                        position: 'absolute', 
+                                        top: 0,
+                                        left: 0,
+                                        zIndex: 0 
+                                    }}
+                                />
+                                <CardContent 
+                                    sx={{ 
+                                        willChange: 'opacity',
+                                        position: 'absolute', 
+                                        bottom: 0, 
+                                        left: 0, 
+                                        right: 0, 
+                                        zIndex: 1,
+                                        color: '#00000', 
+                                        backgroundColor: 'rgba(256, 256, 256, 0.6)', 
+                                        padding: '16px',
+                                        margin: '8px',
+                                        opacity: 0, 
+                                        transition: 'opacity 0.3s ease', 
+                                        '&.overlay': { 
+                                            position: 'absolute',
+                                            top: 0,
+                                            left: 0,
+                                            right: 0,
+                                            bottom: 0,
+                                            display: 'flex',
+                                            flexDirection: 'column',
+                                            justifyContent: 'center',
+                                            alignItems: 'center',
+                                            padding: '8px',
+                                        }
+                                    }}
+                                    className="overlay"
                                 >
-                                    {dancer.additionalDetails}
-                                </Typography> */}
-                            </CardContent>
-                        </Card>
-                    </Grid>
-                ))}
-            </Grid>
-            <Box>
-                <div className="past">
-                    <h1>Other Performances</h1>
-                </div>
+                                    {/* <Typography variant="h6" component="div">
+                                        {dancer.name}
+                                    </Typography>
+                                    <Typography sx={{ mb: 1.5 }}>
+                                        {dancer.description}
+                                    </Typography>
+                                    <Typography 
+                                        variant="body2" 
+                                        sx={{ whiteSpace: 'pre-line', textAlign: 'center' }}
+                                    >
+                                        {dancer.additionalDetails}
+                                    </Typography> */}
+                                </CardContent>
+                            </Card>
+                        </Grid>
+                    ))}
+                </Grid>
+                <Box>
+                    <div className="past">
+                        <h1>Other Performances</h1>
+                    </div>
+                </Box>
             </Box>
-        </Box>
+        </ThemeProvider>
     )
 }
 

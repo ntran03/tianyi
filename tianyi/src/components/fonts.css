@@ -1,0 +1,11 @@
+@font-face {
+    font-family: "Cormorant", serif;
+    font-optical-sizing: auto;
+    font-weight: 300;
+    font-style: normal;
+    src: url(../Cormorant/Cormorant-Italic-VariableFont_wght.ttf) format('ttf');
+  }
+
+body {
+    font-family: 'Cormorant', serif;
+}
