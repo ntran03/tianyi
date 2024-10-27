@@ -6,6 +6,7 @@ import Dancers from './components/dancers';
 import Contact from './components/contact';
 import Costumes from './components/costume_sale';
 import Footer from './components/footer';
+import Showcase from './components/showcase';
 
 function App() {
   return (
@@ -14,7 +15,8 @@ function App() {
 
       <Routes>
         <Route path="/" element={<Home />} />
-        <Route path="/events" element={<Dancers />} />
+        <Route path="/dancers" element={<Dancers />} />
+        <Route path="/showcase" element={<Showcase />} />
         <Route path="/costume_sale" element={<Costumes />} />
         <Route path="/contact" element={<Contact />} />
       </Routes>
