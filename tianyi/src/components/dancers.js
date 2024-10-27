@@ -68,6 +68,108 @@ const dancersData = [
         name: "Claire C",
         description: "Artistic Board",
         additionalDetails: "Member since: Fall 2023\nMajor: Computer Science '27",
+    },
+    {
+        id: 11,
+        name: "Queenie",
+        description: "Dancer",
+        additionalDetails: "Member since: Fall 2021\nMajor: Technology and Information Design '25",
+    },
+    {
+        id: 12,
+        name: "Jessica",
+        description: "Dancer",
+        additionalDetails: "Member since: Fall 2021\nMajor: Computer Science '25",
+    },
+    {
+        id: 13,
+        name: "Huanying",
+        description: "Dancer",
+        additionalDetails: "Member since: Fall 2021\nMajor: Accounting '24",
+    },
+    {
+        id: 14,
+        name: "Nicole Z",
+        description: "Dancer",
+        additionalDetails: "Member since: Fall 2022\nMajor: Chemical Engineering and Computer Science '25",
+    },
+    {
+        id: 15,
+        name: "Kaitlyn",
+        description: "Dancer",
+        additionalDetails: "Member since: Fall 2018\nMajor: Computer Science '22",
+    },
+    {
+        id: 16,
+        name: "Alex",
+        description: "Dancer",
+        additionalDetails: "Member since: Fall 2022\nMajor: Materials Engineering and Computer Science '23",
+    },
+    {
+        id: 17,
+        name: "Claire W",
+        description: "Dancer",
+        additionalDetails: "Member since: Fall 2022\nMajor: Biochemistry '26",
+    },
+    {
+        id: 18,
+        name: "Regina",
+        description: "Dancer",
+        additionalDetails: "Member since: Fall 2017\nMajor: Mechanical Engineering '21",
+    },
+    {
+        id: 19,
+        name: "Ingrette",
+        description: "Dancer",
+        additionalDetails: "Member since: Fall 2022\nMajor: Computer Science '25",
+    },
+    {
+        id: 20,
+        name: "Lauren",
+        description: "Dancer",
+        additionalDetails: "Member since: Fall 2023\nMajor: Neuroscience and Economics '26",
+    },
+    {
+        id: 21,
+        name: "Vanessa",
+        description: "Dancer",
+        additionalDetails: "Member since: Fall 2023\nMajor: Business '27",
+    },
+    {
+        id: 22,
+        name: "Anna",
+        description: "Dancer",
+        additionalDetails: "Member since: Fall 2023\nMajor: Computer Engineering '27",
+    },
+    {
+        id: 23,
+        name: "Rowena",
+        description: "Dancer",
+        additionalDetails: "Member since: Fall 2024\nMajor: Chemistry '27",
+    },
+    {
+        id: 24,
+        name: "Clarissa",
+        description: "Dancer",
+        additionalDetails: "Member since: Fall 2024\nMajor: Electrical Engineering '27",
+    },
+    {
+        id: 25,
+        name: "Katherine F",
+        description: "Dancer",
+        additionalDetails: "Member since: Fall 2024\nMajor: Public Health Science '28",
+    },
+    {
+        id: 26,
+        name: "Erica",
+        description: "Dancer",
+        additionalDetails: "Member since: Fall 2024\nMajor: Computer Science '26",
+    },
+    {
+        id: 27,
+        name: "Grace",
+        description: "Dancer",
+        additionalDetails: "Member since: Fall 2024\nMajor: Computer Science '26",
     }
 ];
 
