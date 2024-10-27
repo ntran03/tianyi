@@ -33,7 +33,7 @@ function Home() {
     }, []);
 
     const upcoming_events = [
-        { title: "TASA Night Market: 11/15, 7:00 pm", description: "Dai is performing at TASA Night Market!"},
+        { title: "Tour of Taiwan: 11/15, 7:00 pm", description: "Dai is performing at TASA's Tour of Taiwan!"},
         { title: "Forward Motion Showcase, 11/24, 5:30 pm", description: "Nicole and Huanying are performing at Forward Motion's showcase!"},
         { title: "Unbound Fall Showcase: 12/8, 3:00 pm", description: ""}
     ];
