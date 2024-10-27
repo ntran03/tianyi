@@ -3,7 +3,7 @@ import hantang from './images/hantang.jpg';
 import longing from './images/longing.jpg';
 import umbrella from './images/umbrella.jpg';
 import './home.css';
-import { Box, Card, Typography, CardContent } from '@mui/material';
+import { Grid, Box, Card, Typography, CardContent } from '@mui/material';
 
 function Home() {
     useEffect(() => {
@@ -23,7 +23,7 @@ function Home() {
     return (
         <Box sx={{ padding: 0 }}>
             {/* Slideshow */}
-            <Box id="slideshow">
+            <Box id="slideshow" sx={{ position: 'relative', height: '400px', width: '100%', mb: 4 }}> {/* Increased mb */}
                 <div className="slide active">
                     <img src={hantang} alt="Han Tang 2023"/>
                 </div>
@@ -34,22 +34,39 @@ function Home() {
                     <img src={umbrella} alt="Umbrella 2023"/>
                 </div>
             </Box>
-
-            {/* Card Below Slideshow */}
-            <Card 
-                variant="outlined" 
-                sx={{ 
-                    padding: 2, 
-                    textAlign: 'center' 
-                }}
-                className="card-spacing" // Apply the spacing class here
-            >
-                <CardContent>
-                    <Typography variant="h6">
-                        Hello!
-                    </Typography>
-                </CardContent>
-            </Card>
+            {/* Grid for two cards */}
+            <Grid container spacing={4} sx={{ mb: 2 }}> {/* Increased spacing */}
+                <Grid item xs={12} sm={6}>
+                    <Card 
+                        variant="outlined" 
+                        sx={{ padding: 3, textAlign: 'center' }} // Increased padding
+                    >
+                        <CardContent>
+                            <Typography variant="h6">
+                                Card 1
+                            </Typography>
+                            <Typography variant="body2">
+                                This is the content of Card 1.
+                            </Typography>
+                        </CardContent>
+                    </Card>
+                </Grid>
+                <Grid item xs={12} sm={6}>
+                    <Card 
+                        variant="outlined" 
+                        sx={{ padding: 3, textAlign: 'center' }} // Increased padding
+                    >
+                        <CardContent>
+                            <Typography variant="h6">
+                                Card 2
+                            </Typography>
+                            <Typography variant="body2">
+                                This is the content of Card 2.
+                            </Typography>
+                        </CardContent>
+                    </Card>
+                </Grid>
+            </Grid>
         </Box>
     );
 }
