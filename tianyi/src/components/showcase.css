@@ -11,6 +11,7 @@
 }
 .past > p {
     padding: 2em;
+    padding-bottom: 0;
 }
 .flyers {
     padding: 2em;
